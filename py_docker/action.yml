@@ -1,14 +1,17 @@
-name: 'test shibui'
+name: 'test python docker'
 description: 'Provide a description here'
 author: 'test shibui org'
 inputs:
-  milliseconds: # change this
+  test:
     required: true
     description: 'input description here'
-    default: '10'
+    default: 'aaabbb'
 runs:
-  using: 'node16'
-  main: 'dist/index.js'
+  using: 'docker'
+  image: 'py_docker/Dockerfile'
+  args:
+    - '--test'
+    - ${{ inputs.test }}
 branding:
   icon: 'message-square'
   color: 'orange'

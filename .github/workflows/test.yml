@@ -22,3 +22,6 @@ jobs:
       - uses: ./
         with:
           milliseconds: 5000
+      - uses: ./py_docker
+        with:
+          test: 'afdsafdsaf'
