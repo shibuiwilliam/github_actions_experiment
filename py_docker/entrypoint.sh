@@ -3,4 +3,4 @@
 set -eu
 
 cd /opt
-python -m src.main
+python -m src.main --test ${1}

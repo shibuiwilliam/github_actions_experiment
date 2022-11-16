@@ -10,7 +10,6 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - '--test'
     - ${{ inputs.test }}
 branding:
   icon: 'message-square'
