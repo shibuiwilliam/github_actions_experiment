@@ -1,9 +1,11 @@
 FROM python:3-slim
 
-WORKDIR /
-COPY src /src
-COPY requirements.txt /requirements.txt
+WORKDIR /opt
+COPY src /opt/src
+COPY requirements.txt /opt/requirements.txt
+COPY entrypoint.sh /opt/entrypoint.sh
 
-RUN pip install -r /requirements.txt
+RUN pip install -r /opt/requirements.txt && \
+    chmod +x /opt/entrypoint.sh
 
-ENTRYPOINT ["python", "-m", "src.main"]
+ENTRYPOINT ["/opt/entrypoint.sh"]
