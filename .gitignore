@@ -95,7 +95,7 @@ typings/
 Thumbs.db
 
 # Ignore built ts files
-__tests__/runner/*
-lib/**/*
+js_action/__tests__/runner/*
+js_action/lib/**/*
 
 .idea/*

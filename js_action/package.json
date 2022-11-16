@@ -5,12 +5,12 @@
   "description": "TypeScript template action",
   "main": "lib/main.js",
   "scripts": {
-    "build": "tsc",
-    "format": "prettier --write '**/*.ts'",
-    "format-check": "prettier --check '**/*.ts'",
-    "lint": "eslint src/**/*.ts",
-    "package": "ncc build --source-map --license licenses.txt",
-    "test": "jest",
+    "build": "../node_modules/.bin/tsc",
+    "format": "../node_modules/.bin/prettier --write '**/*.ts'",
+    "format-check": "../node_modules/.bin/prettier --check '**/*.ts'",
+    "lint": "../node_modules/.bin/eslint js_action/src/**/*.ts",
+    "package": "../node_modules/.bin/ncc build --source-map --license licenses.txt",
+    "test": "../node_modules/.bin/jest",
     "all": "npm run build && npm run format && npm run lint && npm run package && npm test"
   },
   "repository": {
