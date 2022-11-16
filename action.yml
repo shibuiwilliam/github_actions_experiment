@@ -1,11 +1,11 @@
-name: 'Your name here'
+name: 'test shibui'
 description: 'Provide a description here'
-author: 'Your name or organization here'
+author: 'test shibui org'
 inputs:
   milliseconds: # change this
     required: true
     description: 'input description here'
-    default: 'default value if applicable'
+    default: '10'
 runs:
   using: 'node16'
   main: 'dist/index.js'
