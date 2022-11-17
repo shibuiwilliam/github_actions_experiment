@@ -13,7 +13,7 @@ runs:
       run: echo ${{ inputs.test }}
       shell: bash
     - id: second
-      run: run.sh
+      run: ./run.sh
       shell: bash
       env:
         INPUT: ${{ inputs.test }}
