@@ -22,6 +22,9 @@ jobs:
       - uses: ./js_action
         with:
           milliseconds: 5000
-      - uses: ./py_docker
+      - uses: ./docker_action
+        with:
+          test: 'afdsafdsaf'
+      - uses: ./composite_action
         with:
           test: 'afdsafdsaf'

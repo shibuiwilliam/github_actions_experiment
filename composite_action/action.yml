@@ -1,0 +1,22 @@
+name: 'test composite'
+description: 'Provide a description here'
+author: 'test shibui org'
+inputs:
+  test:
+    required: true
+    description: 'input description here'
+    default: 'aaabbb'
+runs:
+  using: "composite"
+  steps:
+    - id: first
+      run: echo ${{ inputs.test }}
+      shell: bash
+    - id: second
+      run: run.sh
+      shell: bash
+      env:
+        INPUT: ${{ inputs.test }}
+    - id: third
+      run: pip install numpy
+      shell: bash
