@@ -17,6 +17,10 @@ runs:
       shell: bash
       env:
         INPUT: ${{ inputs.test }}
-    - id: third
+    - name: third
+      uses: actions/setup-python@v2
+      with:
+        python-version: "3.10"
+    - id: fourth
       run: pip install numpy
       shell: bash
